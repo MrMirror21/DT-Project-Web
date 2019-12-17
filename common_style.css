@@ -1,0 +1,78 @@
+.invisible {
+    visibility : hidden;
+}
+.header {
+    background : #2f3640;
+    display: grid;
+    grid-template-columns : 0fr 1fr 5fr 1fr;
+    color: white;
+    font-size : 25px;
+    font-family : "monsterrat";
+}
+#home-btn {
+    color : white;
+    font-size : 2.5em;
+}
+#home_text {
+    padding-top : 13px;
+}
+.search {
+    padding-top : 10px;
+}
+#search {
+    font-size : 2em;
+}
+#eisc {
+    font-size : 20em;
+}
+.search-result{
+    display : grid;
+    grid-template-columns: 40% 70%;
+}
+.search-result-building  {
+    text-align : center;
+    padding-top : 100px;
+    min-width : 200px;
+}
+.search-result-building-floor  {
+    position: relative;
+    text-align : left;
+    min-width : 400px;
+}
+.extinguisher-icon {
+    color : black;
+    font-size : 2em;
+}
+.extinguisher-icon:hover {
+    color : red;
+    transition : 0.3s;
+}
+.extinguisher-1 {
+    position: absolute;
+    top : 200px;
+    left : 272px;
+}
+.extinguisher-2 {
+    position: absolute;
+    top : 280px;
+    left : 255px;
+}
+.extinguisher-3 {
+    position: absolute;
+    top : 323px;
+    left : 325px;
+}
+#extinguisherchk-1:hover ~ .status-1 {
+    visibility : visible;
+}
+.status-1 {
+    background : #353b48;
+    color : white;
+}
+#extinguisherchk-2:checked ~ #status-2 {
+    visibility : visible;
+}
+.mouseover:hover {
+    color : green;
+    transition : 0.3s;
+}
