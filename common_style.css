@@ -52,73 +52,52 @@
     top : 190px;
 }
 #floor1-chk:checked ~ .floor-btn{
-    color : red;
+    background : red;
     transition : 0.5s;
 }
 #floor1-chk:checked ~ #floor1-status{
     left : -30%;
 }
-#floor1-chk:checked ~ #floor2-status{
-    left : -100%;
+#floor2-chk:checked ~ #floor1-status{
+    left : -30%;
 }
-#floor1-chk:checked ~ #floor3-status{
-    left : -100%;
+#floor3-chk:checked ~ #floor1-status{
+    left : -30%;
 }
-#floor1-chk:checked ~ #floor4-status{
-    left : -100%;
+#floor4-chk:checked ~ #floor1-status{
+    left : -30%;
 }
-
+#floor1-chk:checked ~ #floor-num-1{
+    color : red;
+}
+#floor2-chk:checked ~ #floor-num-2{
+    visibility : visible;
+}
+.floor-number{
+    z-index : 1100;
+    visibility: visible;
+    position : absolute;
+    left : 600px;
+    top : 100px;
+}
 #floor2 {
     position : absolute;
     left : 280px;
     top : 150px;
 }
-#floor2-chk:checked ~ #floor1-status{
-    left : -100%;
-}
-#floor2-chk:checked ~ #floor2-status{
-    left : -30%;
-}
-#floor2-chk:checked ~ #floor3-status{
-    left : -100%;
-}
-#floor2-chk:checked ~ #floor4-status{
-    left : -100%;
-}
+
 #floor3 {
     position : absolute;
     left : 280px;
     top : 110px;
 }
-#floor3-chk:checked ~ #floor1-status{
-    left : -100%;
-}
-#floor3-chk:checked ~ #floor2-status{
-    left : -100%;
-}
-#floor3-chk:checked ~ #floor3-status{
-    left : -30%;
-}
-#floor3-chk:checked ~ #floor4-status{
-    left : -100%;
-}
+
 #floor4 {
     position : absolute;
     left : 280px;
     top : 70px;
 }
-#floor4-chk:checked ~ #floor1-status{
-    left : -100%;
-}
-#floor4-chk:checked ~ #floor2-status{
-    left : -100%;
-}
-#floor4-chk:checked ~ #floor3-status{
-    left : -100%;
-}
-#floor4-chk:checked ~ #floor4-status{
-    left : -30%;
-}
+
 
 .search-result{
     display : grid;
@@ -136,6 +115,7 @@
 .extinguisher-icon {
     color : black;
     font-size : 2em;
+    z-index : 990;
 }
 .extinguisher-icon:hover {
     color : red;
@@ -148,28 +128,42 @@
 }
 .extinguisher-2 {
     position: absolute;
-    top : 280px;
-    left : 255px;
+    top :290px;
+    left : 280px;
 }
 .extinguisher-3 {
     position: absolute;
-    top : 323px;
-    left : 325px;
+    top : 350px;
+    left : 355px;
 }
-#extinguisherchk-1:hover ~ .status-1 {
+#extinguisherchk-1:checked ~ .status-1 {
     visibility : visible;
+}
+#extinguisherchk-1:checked ~ #ex1 {
+    color: green;
 }
 .status-1 {
     background : #353b48;
     color : white;
+    z-index : 10000;
 }
-#extinguisherchk-2:checked ~ #status-2 {
+#extinguisherchk-2:checked ~ .status-2 {
     visibility : visible;
 }
-.mouseover:hover {
-    color : green;
-    transition : 0.3s;
+.status-2 {
+    background : #353b48;
+    color : white;
+    z-index : 10000;
 }
+#extinguisherchk-3:checked ~ .status-3 {
+    visibility : visible;
+}
+.status-3 {
+    background : #353b48;
+    color : white;
+    z-index : 10000;
+}
+
 
 @media(max-width: 550px){
     .header {
@@ -190,6 +184,7 @@
         z-index : 102;
         transition: 0.5s;
     }
+
     .search-result-building{
         position:relative;
         left: -150%;
