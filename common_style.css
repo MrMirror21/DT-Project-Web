@@ -139,9 +139,7 @@
 #extinguisherchk-1:checked ~ .status-1 {
     visibility : visible;
 }
-#extinguisherchk-1:checked ~ #ex1 {
-    color: green;
-}
+
 .status-1 {
     background : #353b48;
     color : white;
