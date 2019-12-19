@@ -30,44 +30,56 @@
                 <label for = 'search-chk'><i class="fas fa-search" id = 'search'></i></label>
                 <div class = 'search-result-building'>
                     <i class = "fas fa-building" id = 'eisc'></i>
-                    <input type = "checkbox" class = "floor-chk" id = "floor1-chk">
+                    <input type = "checkbox" class = "floor-chk invisible" id = "floor1-chk">
+                    <input type = "checkbox" class = "floor-chk invisible" id = "floor2-chk">
+                    <input type = "checkbox" class = "floor-chk invisible" id = "floor3-chk">
+                    <input type = "checkbox" class = "floor-chk invisible" id = "floor4-chk">
+
                     <label for = "floor1-chk"><a class = "floor-btn" id = "floor1">1F</a></label>
-                    <input type = "checkbox" class = "floor-chk" id = "floor2-chk">
                     <label for = "floor2-chk"><a class = "floor-btn" id = "floor2">2F</a></label>
-                    <input type = "checkbox" class = "floor-chk" id = "floor3-chk">
                     <label for = "floor3-chk"><a class = "floor-btn" id = "floor3">3F</a></label>
-                    <input type = "checkbox" class = "floor-chk" id = "floor4-chk">
                     <label for = "floor4-chk"><a class = "floor-btn" id = "floor4">4F</a></label>
                     <div class = "floor-status" id = "floor1-status">
                         <img src = "building_ex.png" class = "img">
+                        
                             <div class = 'extinguisher-1'>
-                                <input type = 'button' class = 'invisible' id = 'extinguisherchk-1'>
+                                <input type = 'checkbox' class = 'invisible' id = 'extinguisherchk-1'>
                                 <label for = 'extinguisherchk-1' class = "extinguisher-icon"><i class="fas fa-fire-extinguisher"></i></label>
                                 <div class = "invisible status-1">
-                                    <span>Battery :</span> <a id = 'battery-left'>89</a><span>%</span><br>
-                                    <span>Powder Amount :</span> <a class = 'status'>97</a> <span>%</span><br>
-                                    <span>Air Pressure : 76%</span>
+                                    <span>Battery :</span> <a id = 'battery-left'>89</a><span>%</span>
+                                    <span>Powder :</span> <a class = 'status'>97</a> <span>%</span>
+                                    <span>Air : 76%</span>
                                 </div>
                             </div>
                             <div class = 'extinguisher-2'>
-                                <input type = 'button' class = 'invisible' id = 'extinguisherchk-2'>
-                                <label for = 'extinguisherchk-2' class = "extinguisher-icon"><i class="fas fa-fire-extinguisher"></i></label>
+                                <input type = 'checkbox' class = 'invisible' id = 'extinguisherchk-2'>
+                                <label for = 'extinguisherchk-2' class = "extinguisher-icon"><i class="fas fa-fire-extinguisher" id = "ex1"></i></label>
                                 <div class = "invisible status-2">
-                                    <span>Battery :</span> <a id = 'battery-left'>89</a><span>%</span><br>
-                                    <span>Powder Amount :</span> <a class = 'status'>97</a> <span>%</span><br>
-                                    <span>Air Pressure : 76%</span>
+                                    <span>Battery :</span> <a id = 'battery-left'>89</a><span>%</span>
+                                    <span>Powder :</span> <a class = 'status'>97</a> <span>%</span>
+                                    <span>Air : 76%</span>
                                 </div>
                             </div>
                             <div class = 'extinguisher-3'>
-                                <input type = 'button' class = 'invisible' id = 'extinguisherchk-3'>
+                                <input type = 'checkbox' class = 'invisible' id = 'extinguisherchk-3'>
                                 <label for = 'extinguisherchk-3' class = "extinguisher-icon"><i class="fas fa-fire-extinguisher"></i></label>
                                 <div class = "invisible status-3">
-                                    <span>Battery :</span> <a id = 'battery-left'>89</a><span>%</span><br>
-                                    <span>Powder Amount :</span> <a class = 'status'>97</a> <span>%</span><br>
-                                    <span>Air Pressure : 76%</span>
+                                    <span>Battery :</span> <a id = 'battery-left'>20</a><span>%</span>
+                                    <span>Powder :</span> <a class = 'status'>97</a> <span>%</span>
+                                    <span>Air : 76%</span>
                                 </div>
                             </div>
+                            <div class = 'floor-number'>
+                                <h2><a>Exit</a></h2>
+                                <label for = "floor1-chk"><h2><a id = "floor-num-1">1F</a></h2></label>                                
+                                <label for = "floor2-chk"><h2><a id = "floor-num-2">2F</a></h2></label>                                
+                                <label for = "floor3-chk"><h2><a id = "floor-num-3">3F</a></h2></label>                                
+                                <label for = "floor4-chk"><h2><a id = "floor-num-4">4F</a></h2></label>                              
+                                
+                           
+                    
                     </div>
+
                 </div>
                 
             </div>
