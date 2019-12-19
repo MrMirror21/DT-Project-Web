@@ -4,7 +4,7 @@
 .header {
     background : #2f3640;
     display: grid;
-    grid-template-columns : 0fr 1fr 5fr 1fr;
+    grid-template-columns : 0fr 1fr 5fr 1fr 1fr;
     color: white;
     font-size : 25px;
     font-family : "monsterrat";
@@ -19,25 +19,119 @@
 .search {
     padding-top : 10px;
 }
+#search-chk {
+    display : none;
+}
+#search-bar {
+    padding-top : 10px;
+    text-align : center;
+}
 #search {
-    font-size : 2em;
+    font-size : 1.2em;
+    padding-left : 10px;
+    padding-top : 10px;
 }
 #eisc {
-    font-size : 20em;
+    font-size : 15em;
 }
+.img {
+    min-width : 360px;
+}
+.floor-btn {
+    text-align : center;
+    background : #2f3640;
+    border : none;
+    width : 50px;
+    padding : 8px;
+    border-radius : 30px;
+    color: white;
+}
+#floor1 {
+    position : absolute;
+    left : 280px;
+    top : 190px;
+}
+#floor1-chk:checked ~ .floor-btn{
+    color : red;
+    transition : 0.5s;
+}
+#floor1-chk:checked ~ #floor1-status{
+    left : -30%;
+}
+#floor1-chk:checked ~ #floor2-status{
+    left : -100%;
+}
+#floor1-chk:checked ~ #floor3-status{
+    left : -100%;
+}
+#floor1-chk:checked ~ #floor4-status{
+    left : -100%;
+}
+
+#floor2 {
+    position : absolute;
+    left : 280px;
+    top : 150px;
+}
+#floor2-chk:checked ~ #floor1-status{
+    left : -100%;
+}
+#floor2-chk:checked ~ #floor2-status{
+    left : -30%;
+}
+#floor2-chk:checked ~ #floor3-status{
+    left : -100%;
+}
+#floor2-chk:checked ~ #floor4-status{
+    left : -100%;
+}
+#floor3 {
+    position : absolute;
+    left : 280px;
+    top : 110px;
+}
+#floor3-chk:checked ~ #floor1-status{
+    left : -100%;
+}
+#floor3-chk:checked ~ #floor2-status{
+    left : -100%;
+}
+#floor3-chk:checked ~ #floor3-status{
+    left : -30%;
+}
+#floor3-chk:checked ~ #floor4-status{
+    left : -100%;
+}
+#floor4 {
+    position : absolute;
+    left : 280px;
+    top : 70px;
+}
+#floor4-chk:checked ~ #floor1-status{
+    left : -100%;
+}
+#floor4-chk:checked ~ #floor2-status{
+    left : -100%;
+}
+#floor4-chk:checked ~ #floor3-status{
+    left : -100%;
+}
+#floor4-chk:checked ~ #floor4-status{
+    left : -30%;
+}
+
 .search-result{
     display : grid;
     grid-template-columns: 40% 70%;
 }
 .search-result-building  {
-    text-align : center;
     padding-top : 100px;
     min-width : 200px;
 }
 .search-result-building-floor  {
     position: relative;
     text-align : left;
-    min-width : 400px;
+    min-width : 360px;
 }
 .extinguisher-icon {
     color : black;
@@ -49,8 +143,8 @@
 }
 .extinguisher-1 {
     position: absolute;
-    top : 200px;
-    left : 272px;
+    top : 220px;
+    left : 300px;
 }
 .extinguisher-2 {
     position: absolute;
@@ -75,4 +169,50 @@
 .mouseover:hover {
     color : green;
     transition : 0.3s;
+}
+
+@media(max-width: 550px){
+    .header {
+        grid-template-columns: 0fr 10fr 40fr;
+    }
+  
+    .search-result{
+        display : inline-block;
+    }
+    #floor1-status{
+        position:relative;
+        top : 0%;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        z-index : 102;
+        transition: 0.5s;
+    }
+    .search-result-building{
+        position:relative;
+        left: -150%;
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        z-index : 100;
+        transition: 0.5s;
+    }
+    #search-chk:checked ~ .search-result-building{
+        left: 0%;
+    }
+    .search-result-building-floor{
+        position:fixed;
+        top: 0;
+        left: -150%;
+        background : #2f3640;
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        padding: 0 20px;
+        z-index : 101;
+        transition: 0.5s;
+    }
 }
